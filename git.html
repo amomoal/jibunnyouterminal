@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Git Terminal Commands</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+  <h1>🌿 Terminal Git Commands</h1>
+  <p><a href="index.html">💻 通常コマンドへ</a></p>
+
+  <!-- Status -->
+  <div class="command">
+    <div class="command__title">ステータス</div>
+    <div class="command__row">
+      <span class="command__box" id="gitStatusBox">git status</span>
+      <button class="command__btn command__btn--copy" data-target="gitStatusBox">Copy</button>
+    </div>
+  </div>
+
+  <!-- Add -->
+  <div class="command">
+    <div class="command__title">ステージング</div>
+    <div class="command__row">
+      <span class="command__box" id="gitAddBox">git add</span>
+      <button class="command__btn command__btn--copy" data-target="gitAddBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitAddInput" value=".">
+      <button class="command__btn command__btn--generate" data-input="gitAddInput" data-output="gitAddBox" data-prefix="git add">Generate</button>
+    </div>
+  </div>
+
+  <!-- Commit -->
+  <div class="command">
+    <div class="command__title">コミット</div>
+    <div class="command__row">
+      <span class="command__box" id="gitCommitBox">git commit -m "Initial commit"</span>
+      <button class="command__btn command__btn--copy" data-target="gitCommitBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitCommitInput" value='"Initial commit"'>
+      <button class="command__btn command__btn--generate" data-input="gitCommitInput" data-output="gitCommitBox" data-prefix="git commit -m">Generate</button>
+    </div>
+  </div>
+
+  <!-- Push -->
+
+
+  <div class="command">
+    <div class="command__title">リモートへ送信 (Push)</div>
+
+    <!-- 固定 -->
+    <div class="command__row">
+      <span class="command__box" id="gitPushBox">git push</span>
+      <button class="command__btn command__btn--copy" data-target="gitPushBox">Copy</button>
+    </div>
+
+<!-- 可変１ push -->
+<div class="command__row">
+    <span class="command__box" id="gitPushOriginMainBox">git push origin main</span>
+    <button class="command__btn command__btn--copy" data-target="gitPushOriginMainBox">Copy</button>
+  </div>
+
+  <!-- 可変１　-u 付き push -->
+  <div class="command__row">
+    <span class="command__box" id="gitPushUOriginMainBox">git push -u origin main</span>
+    <button class="command__btn command__btn--copy" data-target="gitPushUOriginMainBox">Copy</button>
+  </div>
+
+ <!-- 可変１　入力欄 + Generate -->
+ <div class="command__row">
+  <input class="command__input" id="gitPushBranchInput" value="origin main">
+  <button 
+    class="command__btn command__btn--generate"
+    data-input="gitPushBranchInput"
+    data-output="gitPushOriginMainBox,gitPushUOriginMainBox"
+    data-prefix="git push"
+  >Generate</button>
+</div>
+
+
+    <!-- 可変2 -->
+    <div class="command__row">
+      <span class="command__box" id="gitPushOriginMain2Box">git push origin main2</span>
+      <button class="command__btn command__btn--copy" data-target="gitPushOriginMain2Box">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitPushBranchInput2" value="origin main2">
+      <button class="command__btn command__btn--generate" data-input="gitPushBranchInput2" data-output="gitPushOriginMain2Box" data-prefix="git push">Generate</button>
+    </div>
+  </div>
+
+  <!-- Pull -->
+  <div class="command">
+    <div class="command__title">リモートの最新を取得</div>
+    <div class="command__row">
+      <span class="command__box" id="gitPullBox">git pull</span>
+      <button class="command__btn command__btn--copy" data-target="gitPullBox">Copy</button>
+    </div>
+  </div>
+
+
+  <!-- branch 一覧 -->
+<div class="command">
+    <div class="command__title">ブランチ一覧表示</div>
+    <div class="command__row">
+      <span class="command__box" id="gitBranchBox">git branch</span>
+      <button class="command__btn command__btn--copy" data-target="gitBranchBox">Copy</button>
+    </div>
+  </div>
+  
+  <!-- checkout -b 新ブランチ -->
+  <div class="command">
+    <div class="command__title">新しいブランチ作成 & 移動</div>
+    <div class="command__row">
+      <span class="command__box" id="gitCheckoutNewBox">git checkout -b new-branch</span>
+      <button class="command__btn command__btn--copy" data-target="gitCheckoutNewBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitCheckoutNewInput" value="new-branch">
+      <button class="command__btn command__btn--generate" data-input="gitCheckoutNewInput" data-output="gitCheckoutNewBox" data-prefix="git checkout -b">Generate</button>
+    </div>
+  </div>
+  
+  <!-- checkout 既存ブランチ -->
+  <div class="command">
+    <div class="command__title">既存ブランチに切り替え</div>
+    <div class="command__row">
+      <span class="command__box" id="gitCheckoutBox">git checkout main</span>
+      <button class="command__btn command__btn--copy" data-target="gitCheckoutBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitCheckoutInput" value="main">
+      <button class="command__btn command__btn--generate" data-input="gitCheckoutInput" data-output="gitCheckoutBox" data-prefix="git checkout">Generate</button>
+    </div>
+  </div>
+  
+  <!-- merge -->
+  <div class="command">
+    <div class="command__title">ブランチをマージ</div>
+    <div class="command__row">
+      <span class="command__box" id="gitMergeBox">git merge feature</span>
+      <button class="command__btn command__btn--copy" data-target="gitMergeBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitMergeInput" value="feature">
+      <button class="command__btn command__btn--generate" data-input="gitMergeInput" data-output="gitMergeBox" data-prefix="git merge">Generate</button>
+    </div>
+  </div>
+  
+  <!-- branch -d -->
+  <div class="command">
+    <div class="command__title">ブランチ削除</div>
+    <div class="command__row">
+      <span class="command__box" id="gitBranchDeleteBox">git branch -d old-branch</span>
+      <button class="command__btn command__btn--copy" data-target="gitBranchDeleteBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitBranchDeleteInput" value="old-branch">
+      <button class="command__btn command__btn--generate" data-input="gitBranchDeleteInput" data-output="gitBranchDeleteBox" data-prefix="git branch -d">Generate</button>
+    </div>
+  </div>
+  
+  <!-- remote -v -->
+  <div class="command">
+    <div class="command__title">リモートURL確認</div>
+    <div class="command__row">
+      <span class="command__box" id="gitRemoteVBox">git remote -v</span>
+      <button class="command__btn command__btn--copy" data-target="gitRemoteVBox">Copy</button>
+    </div>
+  </div>
+  
+  <!-- remote set-url -->
+  <div class="command">
+    <div class="command__title">リモートURL変更</div>
+    <div class="command__row">
+      <span class="command__box" id="gitRemoteSetUrlBox">git remote set-url origin https://github.com/USERNAME/NEWREPO.git</span>
+      <button class="command__btn command__btn--copy" data-target="gitRemoteSetUrlBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitRemoteSetUrlInput" value="origin https://github.com/USERNAME/NEWREPO.git">
+      <button class="command__btn command__btn--generate" data-input="gitRemoteSetUrlInput" data-output="gitRemoteSetUrlBox" data-prefix="git remote set-url">Generate</button>
+    </div>
+  </div>
+
+  <!-- remote 追加 -->
+  <div class="command">
+    <div class="command__title">リモート追加 (remote add)</div>
+  
+    <!-- Copy行 -->
+    <div class="command__row">
+      <span class="command__box" id="gitRemoteAddBox">git remote add origin https://github.com/USERNAME/REPO.git</span>
+      <button class="command__btn command__btn--copy" data-target="gitRemoteAddBox">Copy</button>
+    </div>
+  
+    <!-- Generate行 -->
+    <div class="command__row">
+      <input class="command__input" id="gitRemoteAddInput" value="origin https://github.com/USERNAME/REPO.git">
+      <button 
+        class="command__btn command__btn--generate" 
+        data-input="gitRemoteAddInput" 
+        data-output="gitRemoteAddBox" 
+        data-prefix="git remote add"
+      >Generate</button>
+    </div>
+  </div>
+  
+
+  <!-- diff -->
+<div class="command">
+    <div class="command__title">変更内容を確認 (diff)</div>
+    <div class="command__row">
+      <span class="command__box" id="gitDiffBox">git diff</span>
+      <button class="command__btn command__btn--copy" data-target="gitDiffBox">Copy</button>
+    </div>
+  </div>
+  
+  <!-- log -->
+  <div class="command">
+    <div class="command__title">履歴をきれいに表示 (log)</div>
+    <div class="command__row">
+      <span class="command__box" id="gitLogBox">git log --oneline --graph</span>
+      <button class="command__btn command__btn--copy" data-target="gitLogBox">Copy</button>
+    </div>
+  </div>
+  
+
+  <!-- Clone -->
+  <div class="command">
+    <div class="command__title">クローン</div>
+    <div class="command__row">
+      <span class="command__box" id="gitCloneBox">git clone</span>
+      <button class="command__btn command__btn--copy" data-target="gitCloneBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitCloneInput" value="https://github.com/USERNAME/REPO.git">
+      <button class="command__btn command__btn--generate" data-input="gitCloneInput" data-output="gitCloneBox" data-prefix="git clone">Generate</button>
+    </div>
+  </div>
+
+  <!-- リポジトリ初期化init -->
+  <div class="command">
+    <div class="command__title">リポジトリ初期化 (init)</div>
+    <div class="command__row">
+      <span class="command__box" id="gitInitBox">git init</span>
+      <button class="command__btn command__btn--copy" data-target="gitInitBox">Copy</button>
+    </div>
+  </div>
+
+  <!-- ===============================
+   🔥 削除・取り消し系コマンドまとめ
+   =============================== -->
+
+<!-- git rm -->
+<div class="command">
+    <div class="command__title">ファイルを削除 (git rm)</div>
+    <p>⚡ Git管理下のファイルを削除し、次のコミットで反映される。</p>
+    <p>❗ ワークツリーからも消えるので注意。</p>
+  
+    <div class="command__row">
+      <span class="command__box" id="gitRmBox">git rm file.txt</span>
+      <button class="command__btn command__btn--copy" data-target="gitRmBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitRmInput" value="file.txt">
+      <button class="command__btn command__btn--generate" data-input="gitRmInput" data-output="gitRmBox" data-prefix="git rm">Generate</button>
+    </div>
+  </div>
+  
+  <!-- git restore -->
+  <div class="command">
+    <div class="command__title">変更を元に戻す (git restore)</div>
+    <p>⚡ ファイルの編集を破棄して最後のコミット状態に戻す。</p>
+    <p>❗ 編集内容は消えるので取り消せない。ステージ解除には <code>--staged</code> を使う。</p>
+  
+    <div class="command__row">
+      <span class="command__box" id="gitRestoreBox">git restore file.txt</span>
+      <button class="command__btn command__btn--copy" data-target="gitRestoreBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitRestoreInput" value="file.txt">
+      <button class="command__btn command__btn--generate" data-input="gitRestoreInput" data-output="gitRestoreBox" data-prefix="git restore">Generate</button>
+    </div>
+  </div>
+  
+  <!-- git reset -->
+  <div class="command">
+    <div class="command__title">ステージを取り消す (git reset)</div>
+    <p>⚡ <code>git add</code> を取り消す。作業内容は残る。</p>
+    <p>❗ <code>--hard</code> を付けると変更も全て消えるので要注意。</p>
+  
+    <div class="command__row">
+      <span class="command__box" id="gitResetBox">git reset HEAD file.txt</span>
+      <button class="command__btn command__btn--copy" data-target="gitResetBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitResetInput" value="file.txt">
+      <button class="command__btn command__btn--generate" data-input="gitResetInput" data-output="gitResetBox" data-prefix="git reset HEAD">Generate</button>
+    </div>
+  </div>
+  
+  <!-- git revert -->
+  <div class="command">
+    <div class="command__title">コミットを取り消す (git revert)</div>
+    <p>⚡ 特定のコミットを「打ち消すコミット」を新規作成する。</p>
+    <p>❗ 履歴は壊さず残るので、チーム開発では <code>reset</code> より安全。</p>
+  
+    <div class="command__row">
+      <span class="command__box" id="gitRevertBox">git revert HEAD</span>
+      <button class="command__btn command__btn--copy" data-target="gitRevertBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="gitRevertInput" value="HEAD">
+      <button class="command__btn command__btn--generate" data-input="gitRevertInput" data-output="gitRevertBox" data-prefix="git revert">Generate</button>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+</div>
+
+  <div id="toast" class="toast">Copied!</div>
+
+  <script src="utils.js"></script>
+</body>
+</html>

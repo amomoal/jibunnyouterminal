@@ -125,21 +125,12 @@
   
   
   /* スマホ対応 */
-  @media (max-width: 600px) {
+  @media (hover: none) and (pointer: coarse) {
     .container {
-      width: 90%;       /* 画面幅の90%まで広げる */
-      max-width: 500px; /* 無駄に広がりすぎない */
-    }
-  
-    .command__box,
-    .command__input {
-      font-size: 14px;  /* 少し文字大きめにしてタップしやすく */
-      padding: 8px;
-    }
-  
-    .command__btn {
-      font-size: 13px;
-      padding: 6px 10px;
+      width: 90%;       /* デバイス幅いっぱい */
+      max-width: none;   /* 最大幅制限を解除 */
+      margin: 0;         /* 余白なし */
     }
   }
+  
   

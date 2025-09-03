@@ -28,7 +28,8 @@
   .container {
     width: 400px;           /* 固定幅 */
     max-width: 90%;         /* 狭い画面では縮む */
-    margin: 0 auto;         /* 横中央寄せ */
+          margin-left: 20px;   /* 左寄せ */
+          margin-right: auto;  /* 自動で右余白 */
     display: block;         /* 必ず縦並び */
   }
   
@@ -129,7 +130,7 @@
     .container {
       width: 90%;       /* デバイス幅いっぱい */
       max-width: none;   /* 最大幅制限を解除 */
-      margin: 0;         /* 余白なし */
+      margin: 0 auto;       /* デフォルトは中央寄せ（スマホ用） */
     }
   }
   

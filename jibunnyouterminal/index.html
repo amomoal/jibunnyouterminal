@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Terminal Essential Commands</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+  <h1>🌿 Terminal Essential Commands</h1>
+  <p><a href="git.html">💻 gitコマンドへ</a></p>
+
+<!-- pwd -->
+<div class="command">
+    <div class="command__title">カレントディレクトリを表示 (pwd)</div>
+    <div class="command__row">
+      <span class="command__box" id="pwdBox">pwd</span>
+      <button class="command__btn command__btn--copy" data-target="pwdBox">Copy</button>
+    </div>
+  </div>
+  
+  <!-- ls -->
+  <div class="command">
+    <div class="command__title">ファイル一覧 (ls)</div>
+    <div class="command__row">
+      <span class="command__box" id="lsBox">ls</span>
+      <button class="command__btn command__btn--copy" data-target="lsBox">Copy</button>
+    </div>
+  </div>
+  
+  <div class="command">
+    <div class="command__title">隠しファイルも表示 (ls -a)</div>
+    <div class="command__row">
+      <span class="command__box" id="lsABox">ls -a</span>
+      <button class="command__btn command__btn--copy" data-target="lsABox">Copy</button>
+    </div>
+  </div>
+  
+  <!-- cd -->
+  <div class="command">
+    <div class="command__title">フォルダに移動 (cd)</div>
+    <div class="command__row">
+      <span class="command__box" id="cdBox">cd folder</span>
+      <button class="command__btn command__btn--copy" data-target="cdBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="cdInput" value="folder">
+      <button class="command__btn command__btn--generate" data-input="cdInput" data-output="cdBox" data-prefix="cd">Generate</button>
+    </div>
+  </div>
+  
+  <div class="command">
+    <div class="command__title">1つ上に戻る (cd ..)</div>
+    <div class="command__row">
+      <span class="command__box" id="cdUpBox">cd ..</span>
+      <button class="command__btn command__btn--copy" data-target="cdUpBox">Copy</button>
+    </div>
+  </div>
+  
+  <div class="command">
+    <div class="command__title">ホームに戻る (cd ~)</div>
+    <div class="command__row">
+      <span class="command__box" id="cdHomeBox">cd ~</span>
+      <button class="command__btn command__btn--copy" data-target="cdHomeBox">Copy</button>
+    </div>
+  </div>
+  
+  <!-- mkdir -->
+  <div class="command">
+    <div class="command__title">フォルダ作成 (mkdir)</div>
+    <div class="command__row">
+      <span class="command__box" id="mkdirBox">mkdir new-folder</span>
+      <button class="command__btn command__btn--copy" data-target="mkdirBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="mkdirInput" value="new-folder">
+      <button class="command__btn command__btn--generate" data-input="mkdirInput" data-output="mkdirBox" data-prefix="mkdir">Generate</button>
+    </div>
+  </div>
+  
+  <!-- rm -->
+  <div class="command">
+    <div class="command__title">ファイル削除 (rm)</div>
+    <div class="command__row">
+      <span class="command__box" id="rmBox">rm file.txt</span>
+      <button class="command__btn command__btn--copy" data-target="rmBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="rmInput" value="file.txt">
+      <button class="command__btn command__btn--generate" data-input="rmInput" data-output="rmBox" data-prefix="rm">Generate</button>
+    </div>
+  </div>
+  
+  <div class="command">
+    <div class="command__title">フォルダ削除 (rm -r)</div>
+    <div class="command__row">
+      <span class="command__box" id="rmRBox">rm -r folder</span>
+      <button class="command__btn command__btn--copy" data-target="rmRBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="rmRInput" value="folder">
+      <button class="command__btn command__btn--generate" data-input="rmRInput" data-output="rmRBox" data-prefix="rm -r">Generate</button>
+    </div>
+  </div>
+  
+  <div class="command">
+    <div class="command__title">ファイル内容を表示 (cat)</div>
+    <div class="command__row">
+      <span class="command__box" id="catBox">cat file.txt</span>
+      <button class="command__btn command__btn--copy" data-target="catBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="catInput" value="file.txt">
+      <button class="command__btn command__btn--generate" data-input="catInput" data-output="catBox" data-prefix="cat">Generate</button>
+    </div>
+  </div>
+  
+  <div class="command">
+    <div class="command__title">長いファイルを閲覧 (less)</div>
+    <div class="command__row">
+      <span class="command__box" id="lessBox">less file.txt</span>
+      <button class="command__btn command__btn--copy" data-target="lessBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="lessInput" value="file.txt">
+      <button class="command__btn command__btn--generate" data-input="lessInput" data-output="lessBox" data-prefix="less">Generate</button>
+    </div>
+  </div>
+
+  <div class="command">
+    <div class="command__title">カレントディレクトリをFinderで開く</div>
+    <div class="command__row">
+      <span class="command__box" id="openDotBox">open .</span>
+      <button class="command__btn command__btn--copy" data-target="openDotBox">Copy</button>
+    </div>
+  </div>
+  
+  <div class="command">
+    <div class="command__title">ファイルをデフォアプリで開く</div>
+    <div class="command__row">
+      <span class="command__box" id="openFileBox">open file.txt</span>
+      <button class="command__btn command__btn--copy" data-target="openFileBox">Copy</button>
+    </div>
+    <div class="command__row">
+      <input class="command__input" id="openFileInput" value="file.txt">
+      <button class="command__btn command__btn--generate" data-input="openFileInput" data-output="openFileBox" data-prefix="open">Generate</button>
+    </div>
+  </div>
+  
+
+
+
+
+
+</div>
+
+<div id="toast" class="toast">Copied!</div>
+
+<script src="utils.js"></script>
+</body>
+</html>

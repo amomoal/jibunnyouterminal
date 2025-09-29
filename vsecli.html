@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Terminal Essential Commands</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+  <h1>🌿 Terminal VScode.Eclipse</h1>
+    <p><a href="index.html">💻 通常コマンドへ</a></p>
+  <p><a href="git.html">💻 gitコマンドへ</a></p>
+
+ <!-- VSCode -->
+<div class="command">
+  <div class="command__title">VSCodeを起動</div>
+  <div class="command__row">
+    <span class="command__box" id="vscodeBox">code .</span>
+    <button class="command__btn command__btn--copy" data-target="vscodeBox">Copy</button>
+  </div>
+</div>
+
+<!-- Eclipse -->
+<div class="command">
+  <div class="command__title">Eclipseを起動 (Macの場合)</div>
+  <div class="command__row">
+    <span class="command__box" id="eclipseBox">open -a "Eclipse.app"</span>
+    <button class="command__btn command__btn--copy" data-target="eclipseBox">Copy</button>
+  </div>
+</div>
+
+<!-- VSCode Live Server -->
+<div class="command">
+  <div class="command__title">VSCode Live Serverで開く</div>
+  <div class="command__row">
+    <span class="command__box" id="liveServerBox">右クリック → "Open with Live Server"</span>
+    <button class="command__btn command__btn--copy" data-target="liveServerBox">Copy</button>
+  </div>
+</div>
+
+<!-- Python ローカルサーバー -->
+<div class="command">
+  <div class="command__title">ローカルサーバー起動 (HTML/CSS/JS確認)</div>
+  <div class="command__row">
+    <span class="command__box" id="pyServerBox">python3 -m http.server 8080</span>
+    <button class="command__btn command__btn--copy" data-target="pyServerBox">Copy</button>
+  </div>
+  <p>→ <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></p>
+</div>
+
+<!-- Node.js / npm バージョン確認 -->
+<div class="command">
+  <div class="command__title">Node.js / npm バージョン確認</div>
+  <div class="command__row">
+    <span class="command__box" id="nodeBox">node -v</span>
+    <button class="command__btn command__btn--copy" data-target="nodeBox">Copy</button>
+  </div>
+  <div class="command__row">
+    <span class="command__box" id="npmBox">npm -v</span>
+    <button class="command__btn command__btn--copy" data-target="npmBox">Copy</button>
+  </div>
+</div>
+
+<!-- npm install -->
+<div class="command">
+  <div class="command__title">依存関係インストール (npm install)</div>
+  <div class="command__row">
+    <span class="command__box" id="npmInstallBox">npm install</span>
+    <button class="command__btn command__btn--copy" data-target="npmInstallBox">Copy</button>
+  </div>
+</div>
+
+<!-- npm run dev -->
+<div class="command">
+  <div class="command__title">開発サーバー起動 (Vite/React)</div>
+  <div class="command__row">
+    <span class="command__box" id="npmDevBox">npm run dev</span>
+    <button class="command__btn command__btn--copy" data-target="npmDevBox">Copy</button>
+  </div>
+  <p>→ <a href="http://localhost:5173" target="_blank">http://localhost:5173</a></p>
+</div>
+
+<!-- npm run build -->
+<div class="command">
+  <div class="command__title">本番ビルド (Vite/React)</div>
+  <div class="command__row">
+    <span class="command__box" id="npmBuildBox">npm run build</span>
+    <button class="command__btn command__btn--copy" data-target="npmBuildBox">Copy</button>
+  </div>
+</div>
+
+<!-- Spring Boot -->
+<div class="command">
+  <div class="command__title">Spring Boot 起動</div>
+  <div class="command__row">
+    <span class="command__box" id="springBootBox">./mvnw spring-boot:run</span>
+    <button class="command__btn command__btn--copy" data-target="springBootBox">Copy</button>
+  </div>
+  <p>→ <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></p>
+</div>
+
+
+
+
+</div>
+
+<div id="toast" class="toast">Copied!</div>
+
+<script src="utils.js"></script>
+</body>
+</html>
